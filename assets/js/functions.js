@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
     /* Window Height Resize
     -------------------------------------------------------------------*/
     var windowheight = jQuery(window).height();
-    if(windowheight > 650)
+    /*if(windowheight > 650)
     {
          $('.pattern').removeClass('height-resize');
     }
