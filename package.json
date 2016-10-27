@@ -18,7 +18,6 @@
     "react-tap-event-plugin": "^1.0.0",
     "scroll-into-view": "^1.7.1"
   },
-  "homepage": "http://4onse.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
