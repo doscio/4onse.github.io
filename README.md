@@ -30,7 +30,7 @@ export NODE_PATH="$NODE_PATH:$HOME/local/node-v6.9.1-linux-x64/lib/node_modules"
 ```
 npm install -g create-react-app
 git clone https://github.com/4onse/4onse.github.io.git
-cd 4onse.github.io.git
+cd 4onse.github.io
 npm install
 ```
 
