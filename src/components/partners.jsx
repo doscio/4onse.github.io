@@ -3,13 +3,22 @@ import React from 'react'
 // material ui
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+//bootstrap
+import Grid from 'react-bootstrap/lib/Grid'
+import Row from 'react-bootstrap/lib/Row'
+import Col from 'react-bootstrap/lib/Col'
 //icons
-import logoSupsi from '../data/icons/supsi.png'
-import logoUgm from '../data/icons/ugm3.gif'
-import logoUoM from '../data/icons/uom2.png'
-import logoIst from '../data/icons/ist_pk.png'
+import logoSupsi from '../data/images/partners/supsi_logo.png'
+import logoUgm from '../data/images/partners/ugm_logo.png'
+import logoUoM from '../data/images/partners/uom_logo.png'
+import logoIst from '../data/images/partners/ist_logo.png'
+import logoIWMI from '../data/images/partners/iwmi_logo.png'
+import logoIrri from '../data/images/partners/irri_logo.png'
+import logoGFDRR from '../data/images/partners/gfdrr_logo.png'
 //images
 import partners from '../data/images/background/partners.jpg'
+//css
+import '../css/partners.css';
 
 const Partners = React.createClass({
   handleClickHref (value, event) {
@@ -32,26 +41,51 @@ const Partners = React.createClass({
     const tilesData = [
       {
         img: logoSupsi,
-        title: <strong>SUPSI - The University of Applied Sciences and Arts of Southern Switzerland<br/><em style={{fontSize:'11px'}}>Main Partner</em></strong>,
-        subtitle: <p><strong>Institute of earth sciences</strong>, <em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
+        title: 'INSTITUTE OF EARTH SCIENCES',
+        subtitle: 'SWITZERLAND',
+        role: '(COORDINATOR)',
         url: 'http://www.supsi.ch/ist_en/'
       },
       {
         img: logoUoM,
-        title: <strong>UoM - University of Moratuwa</strong>,
-        subtitle: <p><em>Bandaranayake Mawatha, Katubedda, Moratuwa 10400, Sri Lanka</em></p>,
+        title: 'UNIVERSITY OF MORATUWA',
+        subtitle: 'SRI LANKA',
+        role: '(PARTNER)',
         url: 'https://www.mrt.ac.lk/web/'
       },
       {
         img: logoIst,
-        title: <strong>IST - Institute of Space Technology</strong>,
-        subtitle: <p><em>1, Islamabad Highway, Islamabad 44000</em></p>,
+        title: 'INSTITUTE OF SPACE TECHNOLOGY',
+        subtitle: 'PAKISTAN',
+        role: '(PARTNER)',
         url: 'http://www.ist.edu.pk/'
       },
       {
         img: logoUgm,
-        title: <strong>UGM - Universitas Gadjah Mada</strong>,
-        subtitle: <p><em>Bulaksumur, Yogyakarta,Indonesia 55281</em></p>,
+        title: 'UNIVERSITY OF GADJAH MADA',
+        subtitle: 'INDONESIA',
+        role: '(PARTNER)',
+        url: 'http://ugm.ac.id/en/'
+      },
+      {
+        img: logoIWMI,
+        title: 'INTERNATIONAL WATER MANAGEMENT INSTITUTE',
+        subtitle: 'SRI LANKA',
+        role: '(COLLABORATION)',
+        url: 'http://ugm.ac.id/en/'
+      },
+      {
+        img: logoIrri,
+        title: 'IRRIGATION DEPARTMENT OF ANURADHAPURAS',
+        subtitle: 'SRI LANKA',
+        role: '(COLLABORATION)',
+        url: 'http://ugm.ac.id/en/'
+      },
+      {
+        img: logoGFDRR,
+        title: 'WORLD BANK GFDRR',
+        subtitle: 'USA',
+        role: '(COLLABORATION)',
         url: 'http://ugm.ac.id/en/'
       },
     ];
@@ -61,20 +95,22 @@ const Partners = React.createClass({
         <div className='container' style={{paddingBottom: '10px'}}>
           <h2 className='title-page'>Partners</h2>
           <Divider />
-          <List style={{textAlign: 'left'}}>
-          {tilesData.map((tile, index) => (
-            <div key={'list-card-'+index}>
-              <ListItem
-
-                primaryText={<div><p><img role='presentation' style={{height:'45px'}} src={tile.img} /></p><p>{tile.title}</p></div>}
-                secondaryText={tile.subtitle}
-                onClick={this.handleClickHref.bind(this,tile.url)}
-                className='card'
-              />
-              <Divider />
-            </div>
-          ))}
-          </List>
+          <div className='team-container'>
+            <Row>
+              {tilesData.map((tile, index) => (
+                <Col md={3} sm={6}>
+                  <div className='team-member'>
+                    <img role='presentation' src={tile.img} width='100%' />
+                    <figcaption>
+                      <p className='member-name' style={{fontSize:'12px'}}>{tile.title}</p>
+                      <p className='designation' style={{margin:'0px'}}>{tile.subtitle}</p>
+                      <p style={{fontSize:'9px',margin:'0px'}}>{tile.role}</p>
+                    </figcaption>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
         </div>
       </div>
     )
