@@ -22,15 +22,20 @@ body {
   color: #F0F0F0;
   z-index: 10000;
   padding: 10px;
-  background-color: #484848;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
 .cookie-banner a {
   color: #ffbc00;
 }
 .cookie-banner .button-close {
+  width: 55px;
+  margin: auto;
   margin-top: 10px;
-  background-color: grey;
+  background-color: #ffbc00;
+  border-radius: 20px;
+  border: 1px solid;
+  color: black;
   font-weight: bold;
 }
 
