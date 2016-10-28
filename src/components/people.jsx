@@ -15,7 +15,8 @@ import Twitter from '../data/icons/twitter.svg'
 import GitHub from '../data/icons/github-logo.svg'
 import maxi from '../data/images/team/maxi.jpg'
 import contacts from '../data/images/background/contacts.jpg'
-
+//css
+import '../css/people.css';
 const KEYS_TO_FILTERS = ['name', 'partner', 'role']
 
 const People = React.createClass({
@@ -109,24 +110,22 @@ const People = React.createClass({
           <h2 className='title-page'>Contact</h2>
           <Divider />
           <SearchInput className="search-input" onChange={this.searchUpdated} />
-          {filteredContacts.map((contact, index) => (
-            <Card style={{textAlign:'left'}} key={'key-contact-card-'+index}>
-              <CardHeader
-                title={contact.name}
-                subtitle={contact.role}
-                avatar={contact.avatar}
-              />
-              <CardTitle title={contact.partner} subtitle={contact.address} />
-              <CardText>
-                {contact.description}
-              </CardText>
-              <CardText>
-                <img role='presentation' style={styleSocial} src={Twitter} />
-                <img role='presentation' style={styleSocial} src={Linkedin} />
-                <img role='presentation' style={styleSocial} src={GitHub} />
-              </CardText>
-            </Card>
-          ))}
+          <div className='team-container' >
+            <Row>
+              {filteredContacts.map((contact, index) => (
+                <Col md={3} sm={6} key={'key-people-'+index}>
+                  <div className='team-member' >
+                    <img role='presentation' src={contact.avatar} width='100%' />
+                    <figcaption>
+                      <p className='member-name' style={{fontSize:'12px'}}>{contact.name}</p>
+                      <p className='designation' style={{margin:'0px'}}>{contact.surname}</p>
+                      <p style={{fontSize:'9px',margin:'0px'}}>{contact.role}</p>
+                    </figcaption>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
         </div>
       </div>
     )

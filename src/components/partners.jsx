@@ -95,11 +95,11 @@ const Partners = React.createClass({
         <div className='container' style={{paddingBottom: '10px'}}>
           <h2 className='title-page'>Partners</h2>
           <Divider />
-          <div className='team-container'>
+          <div className='partner-container'>
             <Row>
               {tilesData.map((tile, index) => (
-                <Col md={3} sm={6}>
-                  <div className='team-member' onClick={this.handleClickHref.bind(this, tile.url)}>
+                <Col md={3} sm={6} key={'key-partner-'+index}>
+                  <div className='partner-member' onClick={this.handleClickHref.bind(this, tile.url)}>
                     <img role='presentation' src={tile.img} width='100%' />
                     <figcaption>
                       <p className='member-name' style={{fontSize:'12px'}}>{tile.title}</p>

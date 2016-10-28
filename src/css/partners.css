@@ -1,9 +1,9 @@
 /* 5 - About Us Section
 ---------------------------------------------------------------------- */
-.team-container .col-sm-4{
+.partner-container .col-sm-4{
 	padding:60px 15px 0 15px;
 }
-.team-container .team-member{
+.partner-container .partner-member{
 	max-width:245px;
 	margin:auto;
 	position:relative;
@@ -13,7 +13,7 @@
 }
 
 
-.team-container figcaption{
+.partner-container figcaption{
 	text-align:center;
 	text-transform:uppercase;
 	width:100%;
@@ -22,34 +22,34 @@
 	border-top-color:transparent;
 	margin:0;
 }
-.team-container figcaption h4{
+.partner-container figcaption h4{
 	font-size:22px;
 	font-weight:700;
 	padding-top:20px;
 }
-.team-container .member-name {
+.partner-container .member-name {
 	/*font-size: 1.5em;*/
 	font-weight: 700;
 	margin: 0;
 	padding: 26px 10px 5px 10px;
 }
-.team-container figcaption p{
+.partner-container figcaption p{
 	font-size: 18px;
 }
-.team-container .social-buttons{
+.partner-container .social-buttons{
 	display:inline-block;
 	margin:auto;
 	text-align:center;
 	width:100%;
 }
-.team-member {
+.partner-member {
 	border: 1px;
-	border-color: black;
+	border-color: rgba(0,0,0,0.8);
 	border-style: solid;
 }
 
-.team-member .social-btn-container,
-.team-member .social-btn-container .social-btn-box{
+.partner-member .social-btn-container,
+.partner-member .social-btn-container .social-btn-box{
 	-webkit-transition:all .25s;
 	   -moz-transition:all .25s;
 	    -ms-transition:all .25s;
@@ -57,59 +57,59 @@
 	        transition:all .25s;
 }
 
-.team-member .social-btn-container {
+.partner-member .social-btn-container {
 	position: absolute;
 	top: 0px;
 	margin: 0 auto;
 	left: 0;
 }
-.team-member:hover .social-btn-container{
+.partner-member:hover .social-btn-container{
 	background: rgba(0,0,0,.5);
 }
-.team-member .social-btn-container .team-socail-btn{
+.partner-member .social-btn-container .partner-socail-btn{
 	overflow: hidden;
 	position: relative;
 	width:245px;
 	height: 230px;
 }
-.team-member .social-btn-container .social-btn-box{
+.partner-member .social-btn-container .social-btn-box{
 	position: absolute;
 
 }
-.team-member .social-btn-container .facebook-btn-container{
+.partner-member .social-btn-container .facebook-btn-container{
 	bottom: 220px;
 	right: 230px;
 }
-.team-member .social-btn-container .twitter-btn-container{
+.partner-member .social-btn-container .twitter-btn-container{
 	bottom: 220px;
 	left: 230px;
 }
-.team-member .social-btn-container .linkedin-btn-container{
+.partner-member .social-btn-container .linkedin-btn-container{
 	top: 220px;
 	right: 230px;
 }
-.team-member .social-btn-container .github-btn-container{
+.partner-member .social-btn-container .github-btn-container{
 	top: 220px;
 	left: 230px;
 }
 
-.team-member:hover .social-btn-container .facebook-btn-container{
+.partner-member:hover .social-btn-container .facebook-btn-container{
 	bottom: 115px;
 	right: 122px;
 }
-.team-member:hover .social-btn-container .twitter-btn-container{
+.partner-member:hover .social-btn-container .twitter-btn-container{
 	bottom: 115px;
 	left: 122px;
 }
-.team-member:hover .social-btn-container .linkedin-btn-container{
+.partner-member:hover .social-btn-container .linkedin-btn-container{
 	top: 115px;
 	right: 122px;
 }
-.team-member:hover .social-btn-container .github-btn-container{
+.partner-member:hover .social-btn-container .github-btn-container{
 	top: 115px;
 	left: 122px;
 }
-.team-container .social-buttons a{
+.partner-container .social-buttons a{
 	color:#fff;
 	width:24px;
 	height:24px;
@@ -117,10 +117,10 @@
 	font-size:24px;
 	text-align:center;
 }
-.team-container .team-member figure,
-.team-container .team-member figcaption,
-.team-container .team-member img,
-.team-container .team-member .social-buttons{
+.partner-container .partner-member figure,
+.partner-container .partner-member figcaption,
+.partner-container .partner-member img,
+.partner-container .partner-member .social-buttons{
 
 	-webkit-transition:all .25s;
 	   -moz-transition:all .25s;
@@ -128,15 +128,16 @@
 	     -o-transition:all .25s;
 	        transition:all .25s;
 }
-.team-container .team-member:hover figure{
-	background-color:#3498db;
+.partner-container .partner-member:hover figure{
+	background-color:rgba(0,0,0,0.8);
 	color:#fff;
 }
-.team-container .team-member:hover figcaption{
-	background-color: black;
+.partner-container .partner-member:hover figcaption{
+	background-color: rgba(0,0,0,0.8);
+	border-color:rgba(0,0,0,0.8);
 	color:#fff;
 }
 
-.team-container .team-member:hover .social-buttons{
+.partner-container .partner-member:hover .social-buttons{
 	top:90px;
 }
