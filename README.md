@@ -38,7 +38,7 @@ npm install
 npm start
 ```
 
-**Build the website (only authorized people)**
+**Build the website (only authorized users)**
 ```
 sh ./build.sh
 ```
