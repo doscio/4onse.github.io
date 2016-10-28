@@ -43,9 +43,8 @@
 	width:100%;
 }
 .team-member {
-	border: 7px;
 	border-color: rgba(0,0,0,0.8);
-	border-style: solid;
+	border-style: none;
 }
 
 .team-member figcaption{
@@ -142,8 +141,7 @@
 	opacity: 0.85;
 }
 .team-container .team-member:hover figcaption{
-	background-color: white;
-	color:rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.9);
 }
 
 .team-container .team-member:hover .social-buttons{
