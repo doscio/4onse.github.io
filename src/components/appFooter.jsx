@@ -43,10 +43,10 @@ const AppFooter = React.createClass({
       <Grid style={styleGrid} >
         <Row style={{backgroundColor: '#333'}} >
           <Col md={12}>
-            <a href='https://twitter.com/4onseproject' target='_blank'>
+            <a href='https://twitter.com/SNSF_4onse' target='_blank'>
               <img role="presentation" style={styleSocial} src={Twitter} />
             </a>
-            <a href='https://www.linkedin.com/in/ist-supsi-366a45130' target='_blank'>
+            <a href='https://www.linkedin.com/in/snsf-4onse-366a45130' target='_blank'>
               <img role="presentation" style={styleSocial} src={Linkedin} />
             </a>
             <a href='https://github.com/4onse/' target='_blank'>
