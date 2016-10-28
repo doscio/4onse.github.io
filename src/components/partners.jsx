@@ -72,21 +72,21 @@ const Partners = React.createClass({
         title: 'INTERNATIONAL WATER MANAGEMENT INSTITUTE',
         subtitle: 'SRI LANKA',
         role: '(COLLABORATION)',
-        url: 'http://ugm.ac.id/en/'
+        url: 'http://www.iwmi.cgiar.org/'
       },
       {
         img: logoIrri,
         title: 'IRRIGATION DEPARTMENT OF ANURADHAPURAS',
         subtitle: 'SRI LANKA',
         role: '(COLLABORATION)',
-        url: 'http://ugm.ac.id/en/'
+        url: 'http://www.irrigation.gov.lk/'
       },
       {
         img: logoGFDRR,
         title: 'WORLD BANK GFDRR',
         subtitle: 'USA',
         role: '(COLLABORATION)',
-        url: 'http://ugm.ac.id/en/'
+        url: 'https://www.gfdrr.org/'
       },
     ];
     return (
@@ -99,7 +99,7 @@ const Partners = React.createClass({
             <Row>
               {tilesData.map((tile, index) => (
                 <Col md={3} sm={6}>
-                  <div className='team-member'>
+                  <div className='team-member' onClick={this.handleClickHref.bind(this, tile.url)}>
                     <img role='presentation' src={tile.img} width='100%' />
                     <figcaption>
                       <p className='member-name' style={{fontSize:'12px'}}>{tile.title}</p>
