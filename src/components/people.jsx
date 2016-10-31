@@ -3,16 +3,14 @@ import React from 'react'
 // react search filter
 import SearchInput, {createFilter} from 'react-search-input'
 //materia ui
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 //bootstrap
-import Grid from 'react-bootstrap/lib/Grid'
 import Row from 'react-bootstrap/lib/Row'
 import Col from 'react-bootstrap/lib/Col'
 //icons
-import Linkedin from '../data/icons/linkedin-logo.svg'
+/*import Linkedin from '../data/icons/linkedin-logo.svg'
 import Twitter from '../data/icons/twitter.svg'
-import GitHub from '../data/icons/github-logo.svg'
+import GitHub from '../data/icons/github-logo.svg'*/
 import maxi from '../data/images/team/maxi.jpg'
 import contacts from '../data/images/background/contacts.jpg'
 //css
@@ -40,11 +38,11 @@ const People = React.createClass({
       backgroundPosition:'center',
       height:((heightCarousel*3)/4)+'px'
     }
-    let styleSocial = {
+    /*let styleSocial = {
       maxHeight: '25px',
       maxWidth: '25px',
       margin: '3px'
-    }
+    }*/
     let contactsData = [
       {
         name: 'Prof. Dr. Massimiliano Cannata',

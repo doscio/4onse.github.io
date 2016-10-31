@@ -7,9 +7,6 @@ var scrollIntoView = require('scroll-into-view')
 //loghi
 import FouronseLogo from '../data/icons/4ONSE_logo.png'
 // bootstrap
-import Grid from 'react-bootstrap/lib/Grid'
-import Row from 'react-bootstrap/lib/Row'
-import Col from 'react-bootstrap/lib/Col'
 import Button from 'react-bootstrap/lib/Button'
 import Glyphicon from 'react-bootstrap/lib/Glyphicon'
 // material ui
@@ -23,8 +20,6 @@ import ActionDoneAll from 'material-ui/svg-icons/action/done-all';
 import ActionPermMedia from 'material-ui/svg-icons/action/perm-media';
 import ActionDescription from 'material-ui/svg-icons/action/description';
 import ActionBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
-import SocialGroup from 'material-ui/svg-icons/social/group';
-import LinkIcon from 'material-ui/svg-icons/content/link';
 import NotificationSync from 'material-ui/svg-icons/notification/sync';
 import CommunicationContactMail from 'material-ui/svg-icons/communication/contact-mail';
 import {List, ListItem} from 'material-ui/List';
