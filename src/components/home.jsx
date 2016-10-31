@@ -23,6 +23,9 @@ import openHardware from '../data/images/team/open-hardware.svg'
 import openStandard from '../data/images/team/open-standard.svg'
 import openData from "../data/images/team/open-data.svg"
 
+//css
+import '../css/home.css'
+
 const Home = React.createClass({
   handleButtonClick (value, event) {
     if (value==='partners') {
@@ -98,25 +101,23 @@ const Home = React.createClass({
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <Grid className='grid-home' style={{width:this.props.size.width+'px', height: heightRow, display: 'table',paddingTop:'10px', paddingBottom:'10px'}}>
+        <Grid className='grid-home' style={{width:this.props.size.width+'px', height: heightRow, display: 'table',padding:'10px 0px 10px 0px'}}>
           <Row style={{verticalAlign: 'middle', display:'table-cell'}}>
-            <Col md={3} sm={6}>
+            <Col md={3} sm={6} xs={12}>
               <figure>
                 <img src={openSoftware} alt="Team Member" />
                 <figcaption>
-                  <br/>
                   <strong>IstSOS</strong>
                   <br/>
                   Open SOftware
                 </figcaption>
               </figure>
             </Col>
-            <Col md={3} sm={6}>
+            <Col md={3} sm={6} xs={12}>
               <div>
                 <figure>
                   <img src={openHardware} alt="Team Member" />
                   <figcaption>
-                    <br/>
                     <strong>Arduino</strong>
                     <br/>
                     Open Hardware
@@ -124,28 +125,27 @@ const Home = React.createClass({
                 </figure>
               </div>
             </Col>
-            <Col md={3} sm={6}>
-              <div>
-                <figure>
-                  <img src={openStandard} alt="Team Member" />
-                  <figcaption>
-                    <br/>
-                    <strong>OGC SOS</strong>
-                    <br/>
-                    Open Standard
-                  </figcaption>
-                </figure>
-              </div>
-            </Col>
-            <Col md={3} sm={6}>
+            <div className="clearfix visible-sm"></div>
+            <Col md={3} sm={6} xs={12}>
               <div>
                 <figure>
                   <img src={openData} alt="Team Member" />
                   <figcaption>
-                    <br/>
                     <strong>CKAN</strong>
                     <br/>
                     Open Data
+                  </figcaption>
+                </figure>
+              </div>
+            </Col>
+            <Col md={3} sm={6} xs={12}>
+              <div>
+                <figure>
+                  <img src={openStandard} alt="Team Member" />
+                  <figcaption>
+                    <strong>OGC SOS</strong>
+                    <br/>
+                    Open Standard
                   </figcaption>
                 </figure>
               </div>
