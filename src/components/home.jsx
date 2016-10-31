@@ -51,7 +51,7 @@ const Home = React.createClass({
       styleCarouselTitle.fontSize = '14px'
       styleCarouselItemImg = {width: '100%'}
     }
-    let heightRow = (this.props.size.height - (heightCarousel+this.props.appBar.height+150))
+    let heightRow = (this.props.size.height - (heightCarousel+this.props.appBar.height+160))
     let styleCarouselItem = {height:heightCarousel}
     return (
       <div id="page-top" style={{textAlign:'center'}}>

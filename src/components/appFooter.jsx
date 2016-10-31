@@ -5,6 +5,7 @@ import React from 'react'
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import Image from 'react-bootstrap/lib/Image';
 
 // import logo
 import snfLogo from '../data/images/snf-logo.png'
@@ -14,15 +15,29 @@ import Linkedin from '../data/icons/linkedin-logo_white.svg'
 import Twitter from '../data/icons/twitter-logo_white.svg'
 import GitHub from '../data/icons/github-logo_white.svg'
 
-// material-ui
-//import { Toolbar } from 'material-ui/Toolbar';
+// css
+import '../css/footer.css'
 
 const AppFooter = React.createClass({
   render () {
     let size = this.props.size
     let style = {
-      maxHeight: '104px',
-      padding: '10px'
+      padding: '15px',
+      margin: '0',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)'
+    }
+    let styleSNSF = {
+      paddingBottom: '15px',
+      margin: '0',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)'
     }
 
     let styleSocial = {
@@ -40,6 +55,7 @@ const AppFooter = React.createClass({
       }
     }
     return (
+    <div>
       <Grid style={styleGrid} >
         <Row style={{backgroundColor: '#333'}} >
           <Col md={12}>
@@ -54,36 +70,37 @@ const AppFooter = React.createClass({
             </a>
           </Col>
         </Row>
-        <Row style={{backgroundColor:'white'}}>
-          <Col md={4} sm={4} style={{textAlign: 'center',paddingLeft:'0px'}} >
-            <a href="http://www.snf.ch" target='_BLANK'>
-              <img
-                role="presentation"
-                src={snfLogo}
-                style={style}
-              />
-            </a>
-          </Col>
-          <Col md={4} sm={4} style={{textAlign: 'center'}} >
-            <a href="http://www.r4d.ch" target='_BLANK'>
-            <img
-              role="presentation"
-              src={rd4Logo}
-              style={style}
-            />
-            </a>
-          </Col>
-          <Col md={4} sm={4} style={{textAlign: 'center',}} >
-            <a href="https://www.eda.admin.ch/sdc" target='_BLANK'>
-              <img
-                role="presentation"
-                src={sdcLogo}
-                style={{maxHeight: '54px',padding:'10px'}}
-              />
-            </a>
-          </Col>
-        </Row>
       </Grid>
+      <footer id='footer-section' style={{padding: '20px', overflow: 'hidden'}}>
+        <Col md={4} sm={6} style={{textAlign: 'center',height:'80px'}} >
+          <a href="http://www.snf.ch" target='_BLANK'>
+            <Image
+              src={snfLogo}
+              style={styleSNSF}
+              responsive
+            />
+          </a>
+        </Col>
+        <Col md={4} sm={6} style={{textAlign: 'center',height:'80px'}} >
+          <a href="http://www.r4d.ch" target='_BLANK'>
+          <Image
+            src={rd4Logo}
+            style={style}
+            responsive
+          />
+          </a>
+        </Col>
+        <Col md={4} sm={12} style={{textAlign: 'center',height:'80px'}} >
+          <a href="https://www.eda.admin.ch/sdc" target='_BLANK'>
+            <Image
+              src={sdcLogo}
+              style={style}
+              responsive
+            />
+          </a>
+        </Col>
+      </footer>
+    </div>
     )
   }
 })
