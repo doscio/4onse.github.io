@@ -161,29 +161,34 @@ const AppToolbar = React.createClass({
                 nestedItems={[
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'introduction')}
+                    style={{color:'grey'}}
                     key={1}
                     primaryText="Introduction"
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'background')}
+                    style={{color:'grey'}}
                     key={2}
                     primaryText="Background"
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'objective')}
+                    style={{color:'grey'}}
                     key={3}
                     primaryText="Objective"
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'impacts')}
+                    style={{color:'grey'}}
                     key={4}
                     primaryText="Impacts"
                   />,
                   <ListItem
                     onClick={this.handleClick.bind(this, this.props.location, '/governance')}
                     key={5}
-                    primaryText="Governance"
-                  />,
+                    primaryText={<div><Divider /><br/>Governance</div>}
+                  />
+                  ,
                   <ListItem
                     onClick={this.handleClick.bind(this, this.props.location, '/workingpackages')}
                     key={6}
@@ -328,10 +333,10 @@ const AppToolbar = React.createClass({
                 open={this.state.openMenu}
                 onRequestChange={this.handleOnRequestChange}
               >
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText="Introduction" />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText="Background" />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText="Impacts" />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText="Objective" />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText={<div style={{color:'grey'}}>Introduction</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText={<div style={{color:'grey'}}>Background</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText={<div style={{color:'grey'}}>Impacts</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText={<div style={{color:'grey'}}>Objective</div>} />
                 <Divider />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/governance')} primaryText="Governance" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/workingpackages')} primaryText="Working packages" />
