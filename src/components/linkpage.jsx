@@ -5,6 +5,13 @@ import Divider from 'material-ui/Divider';
 
 const LinkPage = React.createClass({
   render () {
+    let data = [
+      {
+        title: 'B2DROP',
+        description: 'B2DROP is based on ownCloud. ownCloud provides a safe, secure, and compliant file synchronization and sharing solution on servers that you control.',
+        icon: 'someicon',
+      },
+    ]
     return (
       <div id='page-top'>
         <div className='container'>

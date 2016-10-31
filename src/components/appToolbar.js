@@ -28,6 +28,7 @@ import LinkIcon from 'material-ui/svg-icons/content/link';
 import NotificationSync from 'material-ui/svg-icons/notification/sync';
 import CommunicationContactMail from 'material-ui/svg-icons/communication/contact-mail';
 import {List, ListItem} from 'material-ui/List';
+import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 //icons
 import Linkedin from '../data/icons/linkedin-logo.svg'
@@ -138,13 +139,14 @@ const AppToolbar = React.createClass({
           titleStyle={{margin:'auto'}}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
-          style={{color:'#333', position: 'fixed', width:width+'px', height: appBar.height+'px', backgroundColor:'#FFF', zIndex: 2000}}
+          style={{color:'#333', position: 'fixed', height: appBar.height+'px', backgroundColor:'#FFF', zIndex: 2000}}
           className='appToolbar'
         >
           <Drawer
             docked={false}
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})}
+            style={{textAlign: 'left'}}
           >
             <List>
               <ListItem
@@ -330,6 +332,7 @@ const AppToolbar = React.createClass({
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText="Background" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText="Impacts" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText="Objective" />
+                <Divider />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/governance')} primaryText="Governance" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/workingpackages')} primaryText="Working packages" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/casestudy')} primaryText="Case study" />
