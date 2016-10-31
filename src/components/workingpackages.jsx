@@ -36,7 +36,7 @@ const Workingpackages = React.createClass({
           {filteredWpData.map((wp, index) => (
             <ListItem
               key={'wp-key-'+index}
-              primaryText={`${wp.name} - ${wp.title}`}
+              primaryText={<div style={{paddingRight:'25px'}}>{wp.name} - {wp.title}</div>}
               secondaryText={<div style={{height:'100%'}}>
                 <p style={{marginTop:'10px'}}>Duration: <strong>{wp.duration}</strong></p>
                 <p>Participants: <strong>{wp.participants}</strong></p>
@@ -47,17 +47,17 @@ const Workingpackages = React.createClass({
                       key={'objective-key'}
                       primaryText='Objectives'
                       nestedItems={wp.objectives.map((obj, index2) => (
-                        <ListItem key={'objective-key-'+index2} secondaryText={(index2+1)+' - '+obj} />
+                        <ListItem key={'objective-key-'+index2} secondaryText={<div style={{height:'100%', whiteSpace:'normal'}}>{(index2+1)+' - '+obj}</div>} />
                       ))}
                     />,
                     <ListItem
                       key={'deliverables-key'}
                       primaryText='Deliverables'
                       nestedItems={wp.deliverables.map((del, index3) => (
-                        <ListItem key={'deliverables-key-'+index3} secondaryText={`${del.code} - ${del.title} (${del.duration})`} />
+                        <ListItem key={'deliverables-key-'+index3} secondaryText={<div style={{height:'100%', whiteSpace:'normal'}}>{`${del.code} - ${del.title} (${del.duration})`}</div>} />
                       ))}
                     />,
-                    
+
                   ]}
             />
           ))}
