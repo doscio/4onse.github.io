@@ -16,7 +16,7 @@ import logoIWMI from '../data/images/partners/iwmi_logo.png'
 import logoIrri from '../data/images/partners/irri_logo.png'
 import logoGFDRR from '../data/images/partners/gfdrr_logo.png'
 //images
-//import partners from '../data/images/background/partners.jpg'
+import partners from '../data/images/background/partners.jpg'
 //css
 import markerIcon from '../css/leaflet/images/marker-icon.png';
 import markerShadow from '../css/leaflet/images/marker-shadow.png';
@@ -31,7 +31,7 @@ const tilesData = [
     subtitle: 'SWITZERLAND',
     role: '(COORDINATOR)',
     url: 'http://www.supsi.ch/ist_en/',
-    coords: [45,8]
+    coords: [46.02821,8.96105]
   },
   {
     img: logoUoM,
@@ -40,7 +40,7 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(PARTNER)',
     url: 'https://www.mrt.ac.lk/web/',
-    coords: [45,70]
+    coords: [6.7958437,79.8994541]
   },
   {
     img: logoIst,
@@ -49,7 +49,7 @@ const tilesData = [
     subtitle: 'PAKISTAN',
     role: '(PARTNER)',
     url: 'http://www.ist.edu.pk/',
-    coords: [45,60]
+    coords: [33.520377,73.173724]
   },
   {
     img: logoUgm,
@@ -58,7 +58,7 @@ const tilesData = [
     subtitle: 'INDONESIA',
     role: '(PARTNER)',
     url: 'http://ugm.ac.id/en/',
-    coords: [45,50]
+    coords: [-7.7713847,110.3753058]
   },
   {
     img: logoIWMI,
@@ -67,7 +67,7 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
     url: 'http://www.iwmi.cgiar.org/',
-    coords: [45,55]
+    coords: [29.5560871,77.5272099]
   },
   {
     img: logoIrri,
@@ -76,7 +76,7 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
     url: 'http://www.irrigation.gov.lk/',
-    coords: [44,80]
+    coords: [8.3204342,80.416592]
   },
   {
     img: logoGFDRR,
@@ -85,7 +85,7 @@ const tilesData = [
     subtitle: 'USA',
     role: '(COLLABORATION)',
     url: 'https://www.gfdrr.org/',
-    coords: [39,39]
+    coords: [0,0]
   },
 ];
 
@@ -98,8 +98,8 @@ const Partners = React.createClass({
       zoomControl: false,
       minZoom:2,
       maxZoom:18,
-      maxBounds: [L.latLngBounds([-5,-180], [90,180])]
-    }).setView([49.505, 0], 2)
+      //maxBounds: [L.latLngBounds([-20,-180], [80,180])]
+    }).setView([30.14381, 44.78440], 2)
 
 	  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
       maxZoom: 18,
@@ -132,13 +132,14 @@ const Partners = React.createClass({
       heightCarousel = (this.props.size.width/1.77)
     }
     let styleCarouselItem = {
-      //backgroundImage: 'url('+partners+')',
+      /*backgroundImage: 'url('+partners+')',*/
       backgroundPosition:'center',
       height:((heightCarousel*3)/4)+'px'
     }
     return (
       <div id='page-top'>
         <div id='map' style={styleCarouselItem}></div>
+        {/*<div style={styleCarouselItem}></div>*/}
         <div className='container' style={{paddingBottom: '10px'}}>
           <h2 className='title-page'>Partners</h2>
           <Divider />
