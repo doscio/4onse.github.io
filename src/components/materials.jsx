@@ -11,7 +11,7 @@ const Materials = React.createClass({
           <h2 className='title-page'>Materials</h2>
           <Divider />
           <p className='paragraph'>
-
+            Outreach Material is coming soon !!
           </p>
         </div>
       </div>
