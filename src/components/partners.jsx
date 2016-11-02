@@ -16,7 +16,7 @@ import logoIWMI from '../data/images/partners/iwmi_logo.png'
 import logoIrri from '../data/images/partners/irri_logo.png'
 import logoGFDRR from '../data/images/partners/gfdrr_logo.png'
 //images
-import partners from '../data/images/background/partners.jpg'
+//import partners from '../data/images/background/partners.jpg'
 //css
 import markerIcon from '../css/leaflet/images/marker-icon.png';
 import markerShadow from '../css/leaflet/images/marker-shadow.png';
@@ -26,7 +26,8 @@ import '../css/partners.css';
 const tilesData = [
   {
     img: logoSupsi,
-    name: 'SUPSI',
+    name: 'SUPSI - Institue of earth sciences',
+    code: 'SUPSI',
     title: 'INSTITUTE OF EARTH SCIENCES',
     subtitle: 'SWITZERLAND',
     role: '(COORDINATOR)',
@@ -35,7 +36,8 @@ const tilesData = [
   },
   {
     img: logoUoM,
-    name: 'UoM',
+    name: 'Univeristy of Moratuwa',
+    code: 'UoM',
     title: 'UNIVERSITY OF MORATUWA',
     subtitle: 'SRI LANKA',
     role: '(PARTNER)',
@@ -44,7 +46,8 @@ const tilesData = [
   },
   {
     img: logoIst,
-    name: 'IST',
+    name: 'Institute od Space technology',
+    code: 'IST',
     title: 'INSTITUTE OF SPACE TECHNOLOGY',
     subtitle: 'PAKISTAN',
     role: '(PARTNER)',
@@ -53,7 +56,8 @@ const tilesData = [
   },
   {
     img: logoUgm,
-    name: 'UGM',
+    name: 'University of Gadjah Mada',
+    code: 'UGM',
     title: 'UNIVERSITY OF GADJAH MADA',
     subtitle: 'INDONESIA',
     role: '(PARTNER)',
@@ -62,16 +66,18 @@ const tilesData = [
   },
   {
     img: logoIWMI,
-    name: 'IWMI',
+    name: 'International Water Management Institute',
+    code: 'IWMI',
     title: 'INTERNATIONAL WATER MANAGEMENT INSTITUTE',
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
     url: 'http://www.iwmi.cgiar.org/',
-    coords: [29.5560871,77.5272099]
+    coords: [6.89189,79.92768]
   },
   {
     img: logoIrri,
-    name: 'IRRI',
+    name: 'Irrigation department of Anuradhapuras',
+    code: 'IRRI',
     title: 'IRRIGATION DEPARTMENT OF ANURADHAPURAS',
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
@@ -80,7 +86,8 @@ const tilesData = [
   },
   {
     img: logoGFDRR,
-    name: 'GFDRR',
+    name: 'World Bnak GFDRR',
+    code: 'GFDRR',
     title: 'WORLD BANK GFDRR',
     subtitle: 'USA',
     role: '(COLLABORATION)',
@@ -93,8 +100,12 @@ const Partners = React.createClass({
   handleClickHref (value, event) {
     window.open(value, '_blank');
   },
+  handleHover (value, event) {
+    let tilesDataFiltered = tilesData.filter(item => item.code===value)
+    this.mymap.setView(tilesDataFiltered[0].coords,15)
+  },
   componentDidMount () {
-    var mymap = L.map('map',{
+    var mymap = this.mymap = L.map('map',{
       zoomControl: false,
       minZoom:2,
       maxZoom:18,
@@ -117,7 +128,7 @@ const Partners = React.createClass({
     })
     tilesData.map((tile,index)=>{
       let marker = L.marker(tile.coords,{icon: stdIcon})
-      marker.bindPopup(`<strong>${tile.name}</strong><br/>${tile.title}<br/>${tile.role}`).openPopup()
+      marker.bindPopup(`<strong>${tile.name}</strong><br/>${tile.role}`).openPopup()
       marker.addTo(mymap)
       return true
     })
@@ -147,7 +158,7 @@ const Partners = React.createClass({
             <Row>
               {tilesData.map((tile, index) => (
                 <Col md={3} sm={6} key={'key-partner-'+index}>
-                  <div className='partner-member' onClick={this.handleClickHref.bind(this, tile.url)}>
+                  <div className='partner-member' onClick={this.handleClickHref.bind(this, tile.url)} onMouseOver={this.handleHover.bind(this, tile.code)}>
                     <img role='presentation' src={tile.img} width='100%' />
                     <figcaption>
                       <p className='member-name' style={{fontSize:'12px'}}>{tile.title}</p>
