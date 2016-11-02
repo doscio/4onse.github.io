@@ -27,7 +27,7 @@ const Cooperation = React.createClass({
           <h2 className='title-page'>Cooperation</h2>
           <Divider />
           <p className='paragraph'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Fill the Form to became a testing partner. A testing partner will participate at its own cost to the experiment by implementing the station according to project outcomes,  monitoring the system, sharing the data and providing feedback. Of course it is based on voluntary work and no mandatory action is requested. As a result, testing partners will have access to project outcomes, materials and will acquire competence also trough public acknowledgement and recognition of its scientific contribution.
           </p>
           <iframe src="https://docs.google.com/forms/d/1l0Wey8-580JLLwOotQvfXOvwIdaCjFsRJPwe7VEWHRU/viewform?embedded=true"
 					  width="100%"

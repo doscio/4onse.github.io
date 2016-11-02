@@ -23,7 +23,7 @@ import markerShadow from '../css/leaflet/images/marker-shadow.png';
 import '../css/leaflet/leaflet.css';
 import '../css/partners.css';
 
-const tilesData = [
+const partnersData = [
   {
     img: logoSupsi,
     name: 'SUPSI - Institue of earth sciences',
@@ -32,7 +32,8 @@ const tilesData = [
     subtitle: 'SWITZERLAND',
     role: '(COORDINATOR)',
     url: 'http://www.supsi.ch/ist_en/',
-    coords: [46.02821,8.96105]
+    coords: [46.02821,8.96105],
+    color: 'rgb(255, 54, 54)'
   },
   {
     img: logoUoM,
@@ -42,7 +43,8 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(PARTNER)',
     url: 'https://www.mrt.ac.lk/web/',
-    coords: [6.7958437,79.8994541]
+    coords: [6.7958437,79.8994541],
+    color: 'rgb(52, 121, 9)'
   },
   {
     img: logoIst,
@@ -52,7 +54,8 @@ const tilesData = [
     subtitle: 'PAKISTAN',
     role: '(PARTNER)',
     url: 'http://www.ist.edu.pk/',
-    coords: [33.520377,73.173724]
+    coords: [33.520377,73.173724],
+    color: 'rgb(52, 121, 9)'
   },
   {
     img: logoUgm,
@@ -62,7 +65,8 @@ const tilesData = [
     subtitle: 'INDONESIA',
     role: '(PARTNER)',
     url: 'http://ugm.ac.id/en/',
-    coords: [-7.7713847,110.3753058]
+    coords: [-7.7713847,110.3753058],
+    color: 'rgb(52, 121, 9)'
   },
   {
     img: logoIWMI,
@@ -72,7 +76,8 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
     url: 'http://www.iwmi.cgiar.org/',
-    coords: [6.89189,79.92768]
+    coords: [6.89189,79.92768],
+    color: 'rgb(49, 161, 204)'
   },
   {
     img: logoIrri,
@@ -82,7 +87,8 @@ const tilesData = [
     subtitle: 'SRI LANKA',
     role: '(COLLABORATION)',
     url: 'http://www.irrigation.gov.lk/',
-    coords: [8.3204342,80.416592]
+    coords: [8.3204342,80.416592],
+    color: 'rgb(49, 161, 204)'
   },
   {
     img: logoGFDRR,
@@ -92,7 +98,8 @@ const tilesData = [
     subtitle: 'USA',
     role: '(COLLABORATION)',
     url: 'https://www.gfdrr.org/',
-    coords: [0,0]
+    coords: [0,0],
+    color: 'rgb(49, 161, 204)'
   },
 ];
 
@@ -101,8 +108,8 @@ const Partners = React.createClass({
     window.open(value, '_blank');
   },
   handleHover (value, event) {
-    let tilesDataFiltered = tilesData.filter(item => item.code===value)
-    this.mymap.setView(tilesDataFiltered[0].coords,15)
+    let partnersDataFiltered = partnersData.filter(item => item.code===value)
+    this.mymap.setView(partnersDataFiltered[0].coords,15)
   },
   componentDidMount () {
     var mymap = this.mymap = L.map('map',{
@@ -112,10 +119,9 @@ const Partners = React.createClass({
       //maxBounds: [L.latLngBounds([-20,-180], [80,180])]
     }).setView([30.14381, 44.78440], 2)
 
-	  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+	  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-      id: 'mapbox.streets'
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 	  }).addTo(mymap)
     var stdIcon = L.icon({
       iconUrl: markerIcon,
@@ -126,9 +132,9 @@ const Partners = React.createClass({
       shadowSize: [41, 41],
       shadowAnchor: [20, 40],
     })
-    tilesData.map((tile,index)=>{
-      let marker = L.marker(tile.coords,{icon: stdIcon})
-      marker.bindPopup(`<strong>${tile.name}</strong><br/>${tile.role}`).openPopup()
+    partnersData.map((item,index)=>{
+      let marker = L.marker(item.coords,{icon: stdIcon})
+      marker.bindPopup(`<strong>${item.name}</strong><br/>${item.role}`).openPopup()
       marker.addTo(mymap)
       return true
     })
@@ -156,14 +162,14 @@ const Partners = React.createClass({
           <Divider />
           <div className='partner-container'>
             <Row>
-              {tilesData.map((tile, index) => (
+              {partnersData.map((item, index) => (
                 <Col md={3} sm={6} key={'key-partner-'+index}>
-                  <div className='partner-member' onClick={this.handleClickHref.bind(this, tile.url)} onMouseOver={this.handleHover.bind(this, tile.code)}>
-                    <img role='presentation' src={tile.img} width='100%' />
+                  <div className='partner-member' style={{backgroundColor: item.color}} onClick={this.handleClickHref.bind(this, item.url)} onMouseOver={this.handleHover.bind(this, item.code)}>
+                    <img role='presentation' src={item.img} width='100%' />
                     <figcaption>
-                      <p className='member-name' style={{fontSize:'12px'}}>{tile.title}</p>
-                      <p className='designation' style={{margin:'0px'}}>{tile.subtitle}</p>
-                      <p style={{fontSize:'9px',margin:'0px'}}>{tile.role}</p>
+                      <p className='member-name' style={{fontSize:'12px'}}>{item.title}</p>
+                      <p className='designation' style={{margin:'0px'}}>{item.subtitle}</p>
+                      <p style={{fontSize:'9px',margin:'0px'}}>{item.role}</p>
                     </figcaption>
                   </div>
                 </Col>

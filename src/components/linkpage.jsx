@@ -13,8 +13,8 @@ const LinkPage = React.createClass({
       },
     ]*/
     return (
-      <div id='page-top'>
-        <div className='container'>
+      <div id='page-top' style={{minHeight: (this.props.size.height-(this.props.appBar.height+160))+'px'}}>
+        <div className='container' >
           <h2 className='title-page'>Links</h2>
           <Divider />
           <p className='paragraph'>
