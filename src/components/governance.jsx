@@ -37,19 +37,19 @@ const Governance = React.createClass({
               <ul>
                 <li>
                   <h4><u>Core partners</u></h4>
-                  <p><strong>SUPSI</strong> (Switzerland) and <strong>UoM</strong> (Sri Lanka) as leading institution of the research.</p>
+                  <p>SUPSI (Switzerland) and UoM (Sri Lanka) as leading institution of the research.</p>
                 </li>
                 <li>
                   <h4><u>Testing partners</u></h4>
-                  <p><strong>IST</strong> (Pakistan) and <strong>UGM</strong> (Indonesia) as participating in the system testing and dissemination phases only; additional members could be selected during the project execution provided that they can fully cover their live costs.</p>
+                  <p>IST (Pakistan) and UGM (Indonesia) as participating in the system testing and dissemination phases only; additional members could be selected during the project execution provided that they can fully cover their live costs.</p>
                 </li>
                 <li>
                   <h4><u>Project coordinator</u></h4>
-                  <p><strong>Massimiliano Cannata</strong> (SUPSI) is the main applicant responsible for the overall implementation of the project as described in the work plan. Contact between the SNSF and the project.</p>
+                  <p>Massimiliano Cannata (SUPSI) is the main applicant responsible for the overall implementation of the project as described in the work plan. Contact between the SNSF and the project.</p>
                 </li>
                 <li>
                   <h4><u>Dissemination and Communication Manager (DCM)</u></h4>
-                  <p><strong>Markus Hoffman</strong> (SUPSI) is in charge of managing and maintain the project information (communication of activities, updates of website and news, etc.).</p>
+                  <p>Markus Hoffman (SUPSI) is in charge of managing and maintain the project information (communication of activities, updates of website and news, etc.).</p>
                 </li>
                 <li>
                   <h4><u>Steering Group (SG)</u></h4>

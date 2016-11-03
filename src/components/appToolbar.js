@@ -25,10 +25,7 @@ import CommunicationContactMail from 'material-ui/svg-icons/communication/contac
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
-//icons
-import Linkedin from '../data/icons/linkedin-logo.svg'
-import Twitter from '../data/icons/twitter.svg'
-import GitHub from '../data/icons/github-logo.svg'
+
 //css
 import '../css/toolbar.css'
 
@@ -258,34 +255,7 @@ const AppToolbar = React.createClass({
               <ListItem
                 leftIcon={<ActionBookmarkBorder />}
                 primaryText="Links"
-                primaryTogglesNestedList={true}
-                nestedItems={[
-                  <ListItem
-                    onClick={this.handleClick.bind(this, 'link', 'b2drop')}
-                    key={1}
-                    primaryText="B2DROP"
-                  />,
-                  <ListItem
-                    onClick={this.handleClick.bind(this, 'link', 'google')}
-                    key={2}
-                    primaryText="Google group"
-                  />,
-                  <ListItem
-                    onClick={this.handleClick.bind(this, 'link', 'twitter')}
-                    key={3}
-                    primaryText={<div><img role="presentation" src={Twitter} height='20px' /> Twitter</div>}
-                  />,
-                  <ListItem
-                    onClick={this.handleClick.bind(this, 'link', 'linkedin')}
-                    key={4}
-                    primaryText={<div><img role="presentation" src={Linkedin} height='20px' /> Linkedin</div>}
-                  />,
-                  <ListItem
-                    onClick={this.handleClick.bind(this, 'link', 'github')}
-                    key={5}
-                    primaryText={<div><img role="presentation" src={GitHub} height='20px' /> Github</div>}
-                  />
-                ]}
+                onClick={this.handleClick.bind(this, this.props.location, '/links')}
               />
             </List>
           </Drawer>
@@ -328,11 +298,10 @@ const AppToolbar = React.createClass({
                 open={this.state.openMenu}
                 onRequestChange={this.handleOnRequestChange}
               >
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Introduction</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText={<div style={{color:'grey'}}>Introduction</div>} />
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Background</div>} />
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Impacts</div>} />
                 <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Objective</div>} />
-                <Divider />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/governance')} primaryText="Governance" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/workingpackages')} primaryText="Working packages" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/casestudy')} primaryText="Case study" />

@@ -12,6 +12,7 @@ import Col from 'react-bootstrap/lib/Col'
 import Twitter from '../data/icons/twitter.svg'
 import GitHub from '../data/icons/github-logo.svg'*/
 import maxi from '../data/images/team/maxi.jpg'
+import noImage from '../data/images/team/no-image.png'
 import contacts from '../data/images/background/contacts.jpg'
 //css
 import '../css/people.css';
@@ -60,7 +61,7 @@ const People = React.createClass({
         role: 'Communication manager',
         partner: 'SUPSI',
         address: <p>Institute of earth sciences<br/><em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
-        avatar: maxi,
+        avatar: noImage,
         description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
         Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
@@ -71,7 +72,7 @@ const People = React.createClass({
         role: 'Software developer',
         partner: 'SUPSI',
         address: <p>Institute of earth sciences<br/><em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
-        avatar: maxi,
+        avatar: noImage,
         description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
         Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
@@ -82,7 +83,7 @@ const People = React.createClass({
         role: 'Software developer',
         partner: 'SUPSI',
         address: <p>Institute of earth sciences<br/><em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
-        avatar: maxi,
+        avatar: noImage,
         description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
         Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
@@ -93,7 +94,7 @@ const People = React.createClass({
         role: 'Researcher',
         partner: 'SUPSI',
         address: <p>Institute of earth sciences<br/><em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
-        avatar: maxi,
+        avatar: noImage,
         description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
         Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
