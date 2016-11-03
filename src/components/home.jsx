@@ -27,6 +27,9 @@ import openData from "../data/images/team/open-data.svg"
 import '../css/home.css'
 
 const Home = React.createClass({
+  componentDidMount () {
+    window.twttr.widgets.load()
+  },
   handleButtonClick (value, event) {
     if (value==='partners') {
       hashHistory.push(`/${value}`);
@@ -153,7 +156,7 @@ const Home = React.createClass({
               </Col>
             </Col>
             <Col md={2}>
-              <a className="twitter-timeline" href="https://twitter.com/SNSF_4onse">Tweets by SNSF_4onse</a>
+              <a className="twitter-timeline" href="https://twitter.com/SNSF_4onse"></a>
             </Col>
           </Row>
         </Grid>
