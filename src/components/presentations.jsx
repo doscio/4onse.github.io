@@ -11,7 +11,7 @@ const Presentations = React.createClass({
           <h2 className='title-page'>Presentations</h2>
           <Divider />
           <p className='paragraph'>
-            Outreach Presentatio is coming soon !!!
+            Outreach Presentation is coming soon !!!
           </p>
         </div>
       </div>
