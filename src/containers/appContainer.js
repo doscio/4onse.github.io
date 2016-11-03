@@ -5,8 +5,7 @@ import AppToolbar from '../components/appToolbar.js';
 import AppFooter from '../components/appFooter';
 // material-ui
 import RefreshIndicator from 'material-ui/RefreshIndicator';
-// cookie
-import CookieBanner from 'react-cookie-banner';
+
 // css
 import '../css/App.css';
 
@@ -96,15 +95,6 @@ const AppContainer = React.createClass({
     if (this.state.size.width>0) {
       return (
         <div id='app' className="App">
-          <CookieBanner
-            message={'We use cookies on this site to enhance your user experience.'}
-            onAccept={() => {}}
-            disableStyle={true}
-            dismissOnScroll={true}
-            link={{msg: ' Click here for more information.', url: 'https://www.google.com/intl/en/policies/technologies/cookies/'}}
-            cookie='user-has-accepted-cookies'
-            className='cookie-banner'
-          />
           <AppToolbar width={this.state.size.width} access={false} appBar={this.state.appBar}/>
           <div style={{width: this.state.size.width, paddingTop:this.state.appBar.height}}>
             {React.cloneElement(this.props.children, {size: this.state.size, appBar: this.state.appBar})}
