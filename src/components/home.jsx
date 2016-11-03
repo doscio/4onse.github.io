@@ -155,7 +155,7 @@ const Home = React.createClass({
                 </div>
               </Col>
             </Col>
-            <Col md={2}>
+            <Col md={2} style={{maxHeight: `${heightRow}px`, overflowY: 'auto'}}>
               <a className="twitter-timeline" href="https://twitter.com/SNSF_4onse"></a>
             </Col>
           </Row>

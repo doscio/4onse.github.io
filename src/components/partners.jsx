@@ -16,7 +16,7 @@ import logoIWMI from '../data/images/partners/iwmi_logo.png'
 import logoIrri from '../data/images/partners/irri_logo.png'
 import logoGFDRR from '../data/images/partners/gfdrr_logo.png'
 //images
-//import partners from '../data/images/background/partners.jpg'
+import consortium from '../data/images/partners/consortium.png'
 //css
 import markerIcon from '../css/leaflet/images/marker-icon.png';
 import markerShadow from '../css/leaflet/images/marker-shadow.png';
@@ -33,7 +33,7 @@ const partnersData = [
     role: '(COORDINATOR)',
     url: 'http://www.supsi.ch/ist_en/',
     coords: [46.02821,8.96105],
-    color: 'rgb(255, 54, 54)'
+    color: 'rgba(255, 54, 54, 0.5)'
   },
   {
     img: logoUoM,
@@ -44,7 +44,7 @@ const partnersData = [
     role: '(PARTNER)',
     url: 'https://www.mrt.ac.lk/web/',
     coords: [6.7958437,79.8994541],
-    color: 'rgb(52, 121, 9)'
+    color: 'rgba(52, 121, 9, 0.5)'
   },
   {
     img: logoIst,
@@ -55,7 +55,7 @@ const partnersData = [
     role: '(PARTNER)',
     url: 'http://www.ist.edu.pk/',
     coords: [33.520377,73.173724],
-    color: 'rgb(52, 121, 9)'
+    color: 'rgba(52, 121, 9, 0.5)'
   },
   {
     img: logoUgm,
@@ -66,7 +66,7 @@ const partnersData = [
     role: '(PARTNER)',
     url: 'http://ugm.ac.id/en/',
     coords: [-7.7713847,110.3753058],
-    color: 'rgb(52, 121, 9)'
+    color: 'rgba(52, 121, 9, 0.5)'
   },
   {
     img: logoIWMI,
@@ -77,7 +77,7 @@ const partnersData = [
     role: '(COLLABORATION)',
     url: 'http://www.iwmi.cgiar.org/',
     coords: [6.89189,79.92768],
-    color: 'rgb(49, 161, 204)'
+    color: 'rgba(49, 161, 204, 0.5)'
   },
   {
     img: logoIrri,
@@ -88,7 +88,7 @@ const partnersData = [
     role: '(COLLABORATION)',
     url: 'http://www.irrigation.gov.lk/',
     coords: [8.3204342,80.416592],
-    color: 'rgb(49, 161, 204)'
+    color: 'rgba(49, 161, 204, 0.5)'
   },
   {
     img: logoGFDRR,
@@ -98,8 +98,8 @@ const partnersData = [
     subtitle: 'USA',
     role: '(COLLABORATION)',
     url: 'https://www.gfdrr.org/',
-    coords: [0,0],
-    color: 'rgb(49, 161, 204)'
+    coords: [38.8992985,-77.044054],
+    color: 'rgba(49, 161, 204, 0.5)'
   },
 ];
 
@@ -175,6 +175,9 @@ const Partners = React.createClass({
                 </Col>
               ))}
             </Row>
+          </div>
+          <div style={{textAlign:'center'}}>
+            <img role='presentation' src={consortium} height={((heightCarousel*3)/4)+'px'} />
           </div>
         </div>
       </div>
