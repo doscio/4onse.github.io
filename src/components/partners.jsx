@@ -65,7 +65,7 @@ const partnersData = [
     subtitle: 'INDONESIA',
     role: '(PARTNER)',
     url: 'http://ugm.ac.id/en/',
-    coords: [-7.7713847,110.3753058],
+    coords: [-7.76429, 110.37686],
     color: 'rgba(52, 121, 9, 0.5)'
   },
   {
@@ -98,7 +98,7 @@ const partnersData = [
     subtitle: 'USA',
     role: '(COLLABORATION)',
     url: 'https://www.gfdrr.org/',
-    coords: [38.8992985,-77.044054],
+    coords: [40.6981, -73.8601],
     color: 'rgba(49, 161, 204, 0.5)'
   },
 ];
