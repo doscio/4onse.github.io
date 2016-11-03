@@ -11,7 +11,7 @@ const Results = React.createClass({
           <h2 className='title-page'>Results</h2>
           <Divider />
           <p className='paragraph'>
-
+            Results are coming soon !!!
           </p>
         </div>
       </div>

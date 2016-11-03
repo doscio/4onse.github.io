@@ -11,7 +11,7 @@ const Videos = React.createClass({
           <h2 className='title-page'>Videos</h2>
           <Divider />
           <p className='paragraph'>
-
+            Outreach Video is coming soon !!!
           </p>
         </div>
       </div>
