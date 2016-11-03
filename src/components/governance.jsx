@@ -53,18 +53,17 @@ const Governance = React.createClass({
                 </li>
                 <li>
                   <h4><u>Steering Group (SG)</u></h4>
-                  <p>Assertive small group from the core partners to support and assist the decision making and (possible) conflicts resolution. The Steering Group will be the formal governing body of the project, and approve the project’s reports.</p>
-                  <p>
-                    SG Members are:
-                    <ul>
-                      <li>Massimiliano Cannata (SUPSI) - chair</li>
-                      <li>Milan Antonovic (SUPSI)</li>
-                      <li>Rangajeewa Ratnayake (UOM)</li>
-                      <li>P.K.S. Mahanama (UOM)</li>
-                      <li>Imran Sahid (IST)</li>
-                      <li>Oka Karyanto (UGM)</li>
-                    </ul>
+                  <p>Assertive small group from the core partners to support and assist the decision making and (possible) conflicts resolution. The Steering Group will be the formal governing body of the project, and approve the project’s reports.
+                  <br/>SG Members are:
                   </p>
+                  <ul>
+                    <li>Massimiliano Cannata (SUPSI) - chair</li>
+                    <li>Milan Antonovic (SUPSI)</li>
+                    <li>Rangajeewa Ratnayake (UOM)</li>
+                    <li>P.K.S. Mahanama (UOM)</li>
+                    <li>Imran Sahid (IST)</li>
+                    <li>Oka Karyanto (UGM)</li>
+                  </ul>
                 </li>
                 <li>
                   <h4><u>Advisory Board (AB)</u></h4>

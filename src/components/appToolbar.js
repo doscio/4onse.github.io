@@ -159,19 +159,19 @@ const AppToolbar = React.createClass({
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'background')}
-                    style={{color:'grey'}}
+                    style={{color:'grey', marginLeft: '20px'}}
                     key={2}
-                    primaryText="Background"
+                    primaryText='Background'
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'objective')}
-                    style={{color:'grey'}}
+                    style={{color:'grey', marginLeft: '20px'}}
                     key={3}
                     primaryText="Objective"
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'impacts')}
-                    style={{color:'grey'}}
+                    style={{color:'grey', marginLeft: '20px'}}
                     key={4}
                     primaryText="Impacts"
                   />,
