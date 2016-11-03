@@ -50,6 +50,7 @@ body {
 .paragraph {
   margin-top:20px;
   margin-bottom:20px;
+  text-align:justify;
 }
 
 /* parteners page */
