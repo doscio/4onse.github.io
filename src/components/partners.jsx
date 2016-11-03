@@ -119,7 +119,7 @@ const Partners = React.createClass({
       //maxBounds: [L.latLngBounds([-20,-180], [80,180])]
     }).setView([30.14381, 44.78440], 2)
 
-	  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 	  }).addTo(mymap)
