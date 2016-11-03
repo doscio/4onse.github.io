@@ -107,9 +107,12 @@ const Partners = React.createClass({
   handleClickHref (value, event) {
     window.open(value, '_blank');
   },
-  handleHover (value, event) {
+  handleMouseOver (value, event) {
     let partnersDataFiltered = partnersData.filter(item => item.code===value)
     this.mymap.setView(partnersDataFiltered[0].coords,15)
+  },
+  handleMouseLeave () {
+    this.mymap.setView([30.14381, 44.78440], 2)
   },
   componentDidMount () {
     var mymap = this.mymap = L.map('map',{
@@ -164,7 +167,7 @@ const Partners = React.createClass({
             <Row>
               {partnersData.map((item, index) => (
                 <Col md={3} sm={6} key={'key-partner-'+index}>
-                  <div className='partner-member' style={{backgroundColor: item.color}} onClick={this.handleClickHref.bind(this, item.url)} onMouseOver={this.handleHover.bind(this, item.code)}>
+                  <div className='partner-member' style={{backgroundColor: item.color}} onClick={this.handleClickHref.bind(this, item.url)} onMouseOver={this.handleMouseOver.bind(this, item.code)} onMouseLeave={this.handleMouseLeave}>
                     <img role='presentation' src={item.img} width='100%' />
                     <figcaption>
                       <p className='member-name' style={{fontSize:'12px'}}>{item.title}</p>
