@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 // react router
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 // scroll
 var scrollIntoView = require('scroll-into-view')
 //loghi
@@ -47,7 +47,7 @@ const AppToolbar = React.createClass({
     })
   },
   handleOpenMenu () {
-    //hashHistory.push(`/project/${'main'}`);
+    //browserHistory.push(`/project/${'main'}`);
     this.setState({
       openMenu: true,
     })
@@ -102,14 +102,14 @@ const AppToolbar = React.createClass({
           return true
       }
     } else {
-      hashHistory.push(value)
+      browserHistory.push(value)
     }
   },
   handleClickMenuItem (value, event) {
     if (value==='/partners') {
-      hashHistory.push(value)
+      browserHistory.push(value)
     } else {
-      hashHistory.push(`/project/${value}`);
+      browserHistory.push(`/project/${value}`);
       scrollIntoView(document.getElementById(value));
     }
   },
