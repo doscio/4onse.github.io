@@ -158,7 +158,7 @@ const AppToolbar = React.createClass({
                     onClick={this.handleClickMenuItem.bind(this, 'introduction')}
                     style={{color:'grey'}}
                     key={1}
-                    primaryText="Introduction"
+                    primaryText='Introduction'
                   />,
                   <ListItem
                     onClick={this.handleClickMenuItem.bind(this, 'background')}
@@ -328,10 +328,10 @@ const AppToolbar = React.createClass({
                 open={this.state.openMenu}
                 onRequestChange={this.handleOnRequestChange}
               >
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText={<div style={{color:'grey'}}>Introduction</div>} />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText={<div style={{color:'grey'}}>Background</div>} />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText={<div style={{color:'grey'}}>Impacts</div>} />
-                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText={<div style={{color:'grey'}}>Objective</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'introduction')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Introduction</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'background')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Background</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'impacts')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Impacts</div>} />
+                <MenuItem style={styles.textMenu} onClick={this.handleClickMenuItem.bind(this, 'objective')} primaryText={<div style={{color:'grey', marginLeft: '20px'}}>Objective</div>} />
                 <Divider />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/governance')} primaryText="Governance" />
                 <MenuItem style={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/workingpackages')} primaryText="Working packages" />
