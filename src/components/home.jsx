@@ -1,7 +1,7 @@
 // react
 import React from 'react'
 // react-router
-import {browserHistory} from 'react-router'
+import {hashHistory} from 'react-router'
 
 //bootstrap
 import Grid from 'react-bootstrap/lib/Grid'
@@ -29,9 +29,9 @@ import '../css/home.css'
 const Home = React.createClass({
   handleButtonClick (value, event) {
     if (value==='partners') {
-      browserHistory.push(`/${value}`);
+      hashHistory.push(`/${value}`);
     } else {
-      browserHistory.push(`/project/${value}`);
+      hashHistory.push(`/project/${value}`);
     }
   },
   render () {
