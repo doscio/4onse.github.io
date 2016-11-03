@@ -11,7 +11,7 @@ const Advisoryboard = React.createClass({
           <h2 className='title-page'>Advisory board</h2>
           <Divider />
           <p className='paragraph'>
-
+            Advisory board is coming soon !!!
           </p>
         </div>
       </div>

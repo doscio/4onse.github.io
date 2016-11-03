@@ -2,6 +2,8 @@
 import React from 'react'
 //material ui
 import Divider from 'material-ui/Divider';
+//bootstrap
+import Table from 'react-bootstrap/lib/Table'
 
 const LinkPage = React.createClass({
   render () {
@@ -17,8 +19,37 @@ const LinkPage = React.createClass({
         <div className='container' >
           <h2 className='title-page'>Links</h2>
           <Divider />
-          <p className='paragraph'>
-          </p>
+          <div className='paragraph'>
+            <Table striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colSpan="2"></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
     )

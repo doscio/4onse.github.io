@@ -11,7 +11,7 @@ const Stakeholders = React.createClass({
           <h2 className='title-page'>Stakeholders</h2>
           <Divider />
           <p className='paragraph'>
-
+            Stakeholders are coming soon!!!
           </p>
         </div>
       </div>
