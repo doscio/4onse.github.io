@@ -28,7 +28,7 @@ const Cooperation = React.createClass({
           <Divider />
           <p className='paragraph'>
             After reading the <a href="4onseInformationSheet.pdf"> Infromation Sheet </a> fill the Form below to became a testing partner. </p>
-            
+
           <p className='paragraph'>
             A testing partner agree to:
             <ul>
@@ -36,14 +36,14 @@ const Cooperation = React.createClass({
                 <li>deploy the 4ONSE station system following the project outcomes (manuals, instructions, components, etc.)</li>
                 <li>monitor the system, share the data and provide feedbacks</li>
             </ul>
-                Of course it is based on voluntary work and no mandatory action is requested. 
-          </p>  
-          <p className='paragraph'>  
+                Of course it is based on voluntary work and no mandatory action is requested.
+          </p>
+          <p className='paragraph'>
             As a result, testing partners will have access to project outcomes, materials and will acquire competence also trough public acknowledgement and recognition of its scientific contribution.
           </p>
           <iframe src="https://docs.google.com/forms/d/1l0Wey8-580JLLwOotQvfXOvwIdaCjFsRJPwe7VEWHRU/viewform?embedded=true"
 					  width="100%"
-					  height="1400"
+					  height="1631"
 					  frameBorder="0"
 					  marginHeight="0"
 					  marginWidth="0">
