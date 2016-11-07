@@ -47,7 +47,7 @@ const People = React.createClass({
     let contactsData = [
       {
         name: 'Prof. Dr. Massimiliano Cannata',
-        role: 'Project manager',
+        role: 'Project coordinator',
         partner: 'SUPSI',
         address: <p>Institute of earth sciences<br/><em>Trevano - Blocco C Via Trevano, 6952 Canobbio</em></p>,
         avatar: maxi,
@@ -99,7 +99,85 @@ const People = React.createClass({
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
         Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
         Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'Dr. Rangajeewa Ratnayake',
+        role: 'Director of Town and Country Planning Department',
+        partner: 'UOM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'Prof. P.K.S. Mahanama',
+        role: 'Principal investigator',
+        partner: 'UOM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'B.H. Sudantha',
+        role: 'Hardware expert',
+        partner: 'UOM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'P.M.W.P. Kumara',
+        role: 'Hydrologist',
+        partner: 'UOM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'Prasad Dananjaya Bandara',
+        role: 'Research assistant',
+        partner: 'UOM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'Dr. Oka Karyanto',
+        role: 'Principal investigator',
+        partner: 'UGM',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
+      },
+      {
+        name: 'Prof. Imran Sahid',
+        role: 'Principal investigator',
+        partner: 'IST',
+        address: <p>University of Moratuwa,<br/><em>Colombo, Sri Lanka</em></p>,
+        avatar: noImage,
+        description: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.</p>
       }
+      
     ]
     const filteredContacts = contactsData.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return (
