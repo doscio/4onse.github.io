@@ -23,7 +23,7 @@ const LinkPage = React.createClass({
                   <td><strong>B2DROP</strong></td>
                   <td>It provides access to the project data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily</td>
                 </tr>
-                <tr onClick={this.handleClick.bind(this, 'https://www.google.com/calendar/render?cid=NG9uc2Uuc3Vwc2lAZ21haWwuY29t&invEmailKey=daniele.strigaro@supsi.ch:944000be83fda147298c4754fa2ac1aa9e884b20')}>
+                <tr onClick={this.handleClick.bind(this, 'https://calendar.google.com/calendar/embed?src=4onse.supsi%40gmail.com')}>
                   <td><strong>Calendar</strong></td>
                   <td>When, where and what are the next meetings, actions, etc. </td>
                 </tr>
