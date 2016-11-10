@@ -26,8 +26,8 @@ const Impacts = React.createClass({
         <div className='container'>
           <h2 className='title-page'>Impacts</h2>
           <Divider />
-          <ul className='paragraph'>
-            <p>The ultimate desired impact is to strengthen the capacity of data production, usage and management in developing countries. Filling the gap that lead to monitoring network failure in developing countries will empower these countries with the ability: to set-up and maintain their own climatic monitoring network.<br/>This leads, among other benefits, to:</p>
+          <p className='paragraph'>The ultimate desired impact is to strengthen the capacity of data production, usage and management in developing countries. Filling the gap that lead to monitoring network failure in developing countries will empower these countries with the ability: to set-up and maintain their own climatic monitoring network.<br/>This leads, among other benefits, to:</p>
+          <ul>
             <li>shorter reaction time in case of impending hazards</li>
             <li>better understanding of phenomena</li>
             <li>wiser definition of management strategies and policies</li>
