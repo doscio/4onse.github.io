@@ -106,7 +106,7 @@ const Home = React.createClass({
         </Carousel>
         <Grid className='grid-home' style={{width:this.props.size.width+'px', height: heightRow, display: 'table',padding:'10px 0px 10px 0px'}}>
           <Row style={{verticalAlign: 'middle', display:'table-cell'}}>
-            <Col md={10}>
+            <Col md={10} style={{padding: '0px'}}>
               <Col md={3} sm={6} xs={12}>
                 <figure>
                   <img src={openSoftware} alt="Team Member" />
@@ -155,7 +155,7 @@ const Home = React.createClass({
                 </div>
               </Col>
             </Col>
-            <Col md={2} style={{maxHeight: `${heightRow}px`, overflowY: 'auto'}}>
+            <Col md={2} style={{maxHeight: '218px', padding:'0px', overflowY: 'auto'}}>
               <a className="twitter-timeline" href="https://twitter.com/SNSF_4onse"></a>
             </Col>
           </Row>
