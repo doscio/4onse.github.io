@@ -1,6 +1,7 @@
 // react
 import React from 'react'
-
+//material ui
+import Divider from 'material-ui/Divider';
 //icons
 import picture from '../data/icons/timeline/cd-icon-picture.svg';
 import movie from '../data/icons/timeline/cd-icon-movie.svg';
@@ -24,14 +25,16 @@ const Events = React.createClass({
   render () {
 
     return (
-      <div className='cd-container-bg'>
-          <div id='cd-timeline' className='cd-container'>
 
-              {eventsData.map((item, index) => (
-                <div className='cd-timeline-block'>
+    <div className='container'>
+        <h2 className='title-page'>Events</h2>
+        <Divider />
+        <div className='cd-container-bg'>
+            <div id='cd-timeline' className='cd-container'>
 
+            {eventsData.map((item, index) => (
+                <div key={item.id} className='cd-timeline-block'>
                     <div className={'cd-timeline-img cd-' + item.type}>
-
                         <img src={this.imageLoader(item.type)} alt=""></img>
                     </div>
                     <div className='cd-timeline-content'>
@@ -40,10 +43,11 @@ const Events = React.createClass({
                         <span className='cd-date'>{item.date}</span>
                     </div>
                 </div>
-                ))}
+                ))
+            }
+        </div>
 
-            </div>
-
+        </div>
       </div>
 
     )
