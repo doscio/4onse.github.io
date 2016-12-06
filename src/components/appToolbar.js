@@ -330,6 +330,7 @@ const AppToolbar = React.createClass({
               <FlatButton labelStyle={styles.textMenu} onTouchTap={this.handleOpenMenuOutreach} label="Outreach" />
               <FlatButton labelStyle={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/results')} label="Results" />
               <FlatButton labelStyle={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/cooperation')} label="Cooperation" />
+              <FlatButton labelStyle={styles.textMenu} onClick={this.handleClick.bind(this, this.props.location, '/events')} label="Events" />
               <Button onTouchTap={this.handleClick.bind(this, this.props.location, '/links')} style={{backgroundImage:'none',border:'0'}}><Glyphicon glyph="link" /></Button>
             </div>
           </div>

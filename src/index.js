@@ -33,6 +33,7 @@ import Materials from './components/materials';
 import Workingpackages from './components/workingpackages';
 import Governance from './components/governance';
 import Casestudy from './components/casestudy';
+import Events from './components/events';
 
 injectTapEventPlugin();
 
@@ -59,6 +60,7 @@ ReactDOM.render(
         <Route path='videos' component={Videos} />
         <Route path='materials' component={Materials} />
         <Route path='results' component={Results} />
+        <Route path='events' component={Events} />
         <Route path='links' component={LinkPage} />
       </Route>
     </Router>
